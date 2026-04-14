@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceJournal — Transforme ta voix en journal intime</title>
+  <meta name="description" content="VoiceJournal transforme ta voix en journal intime. Parle librement, l'IA transcrit, analyse tes emotions et redige ton journal. Mind Score quotidien 0-100.">
+  <meta property="og:title" content="VoiceJournal — Transforme ta voix en journal intime">
+  <meta property="og:description" content="Parle librement. L'IA transcrit, analyse tes emotions et redige ton journal.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/mascot-happy.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ===== HERO ===== */
+    .hero {
+      display: flex; align-items: center; gap: 48px;
+      max-width: var(--max-width); margin: 0 auto;
+      padding: 64px var(--px) 48px;
+    }
+    .hero-content { flex: 1; }
+    .hero-content p { margin-bottom: 32px; max-width: 440px; }
+    .hero-mascot {
+      position: relative; width: 280px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-mascot .glow {
+      position: absolute; width: 220px; height: 220px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,185,90,0.12) 0%, transparent 70%);
+      filter: blur(30px);
+    }
+    .hero-mascot img {
+      width: 200px; height: 200px; object-fit: contain;
+      position: relative; z-index: 1;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ===== HOW IT WORKS ===== */
+    .how { max-width: var(--max-width); margin: 0 auto; padding: 48px var(--px); }
+    .how h2 { text-align: center; margin-bottom: 40px; }
+    .steps { display: flex; gap: 24px; }
+    .step { flex: 1; text-align: center; }
+    .step-number {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,185,90,0.1); color: var(--secondary);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 15px; margin-bottom: 16px;
+      font-family: 'Manrope', sans-serif;
+    }
+    .step h3 { margin-bottom: 6px; }
+    .step p { font-size: 14px; }
+
+    /* ===== FEATURES ===== */
+    .features { max-width: var(--max-width); margin: 0 auto; padding: 48px var(--px); }
+    .features h2 { text-align: center; margin-bottom: 40px; }
+    .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* ===== CTA ===== */
+    .cta {
+      max-width: var(--max-width); margin: 0 auto;
+      padding: 64px var(--px); text-align: center;
+    }
+    .cta h2 { margin-bottom: 8px; }
+    .cta > p { margin-bottom: 28px; font-size: 15px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 767px) {
+      .hero {
+        flex-direction: column-reverse; gap: 32px;
+        padding: 32px var(--px) 32px; text-align: center;
+      }
+      .hero-content p { max-width: 100%; }
+      .hero-mascot { width: auto; }
+      .hero-mascot img { width: 140px; height: 140px; }
+      .hero-mascot .glow { width: 160px; height: 160px; }
+      .steps { flex-direction: column; gap: 16px; }
+      .features-grid { grid-template-columns: 1fr; }
+      .cta { padding: 48px var(--px); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="nav-logo" href="/">VoiceJournal</a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">Comment ca marche</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Transforme ta voix<br>en <span class="accent">journal intime</span></h1>
+      <p>Parle librement pendant 30 secondes a 3 minutes. L'IA transcrit, analyse tes emotions et redige ton journal. Recois un Mind Score quotidien.</p>
+      <a class="app-store-badge" href="#">Download on the App Store</a>
+      <span class="trial-text">7 jours d'essai gratuit</span>
+    </div>
+    <div class="hero-mascot">
+      <div class="glow"></div>
+      <img src="assets/mascot-happy.png" alt="VoiceJournal mascot" loading="eager">
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="section-label">Comment ca marche</div>
+    <h2>Simple comme parler</h2>
+    <div class="steps">
+      <div class="card step">
+        <div class="step-number">1</div>
+        <h3>Parle</h3>
+        <p>Appuie sur l'orbe et raconte ta journee. 30 secondes a 3 minutes.</p>
+      </div>
+      <div class="card step">
+        <div class="step-number">2</div>
+        <h3>L'IA analyse</h3>
+        <p>Transcription, detection des emotions, redaction de ton journal.</p>
+      </div>
+      <div class="card step">
+        <div class="step-number">3</div>
+        <h3>Decouvre</h3>
+        <p>Mind Score, insights personnalises et journal intime. Partage ta carte.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="section-label">Fonctionnalites</div>
+    <h2>Tout ce qu'il faut pour se connaitre</h2>
+    <div class="features-grid">
+      <div class="card">
+        <div class="card-icon">🎙️</div>
+        <h3>Enregistrement vocal</h3>
+        <p>Interface minimaliste avec orbe animee. Parle naturellement, l'app s'occupe du reste.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <h3>Mind Score 0-100</h3>
+        <p>Un score quotidien qui reflete ton etat emotionnel. Suis ton evolution dans le temps.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📝</div>
+        <h3>Journal redige par l'IA</h3>
+        <p>Tes mots reformules en journal intime. A la premiere personne, en francais.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Stats et tendances</h3>
+        <p>Dashboard complet avec heatmap, distribution, top emotions et evolution.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Prends soin de toi,<br><span class="accent">une voix a la fois</span></h2>
+    <p>3 entrees gratuites pour decouvrir. Passe a Pro pour tout debloquer.</p>
+    <a class="app-store-badge" href="#">Download on the App Store</a>
+    <span class="trial-text">7 jours d'essai gratuit</span>
+  </section>
+
+  <footer class="footer">
+    <span>&copy; 2026 SowDev. Tous droits reserves.</span>
+    <div class="footer-links">
+      <a href="privacy.html">Confidentialite</a>
+      <a href="terms.html">Conditions</a>
+      <a href="support.html">Support</a>
+    </div>
+  </footer>
+
+</body>
+</html>
