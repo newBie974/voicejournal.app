@@ -22,54 +22,74 @@
 
   <main class="content-page">
     <h1>Politique de <span class="accent">Confidentialite</span></h1>
-    <p class="subtitle">Derniere mise a jour : 14 avril 2026</p>
+    <p class="subtitle">Derniere mise a jour : 15 avril 2026</p>
 
     <h2>1. Donnees collectees</h2>
     <p>VoiceJournal collecte les donnees suivantes pour fournir son service :</p>
     <ul>
-      <li><strong>Enregistrements vocaux</strong> — utilises uniquement pour la transcription. Les fichiers audio sont supprimes apres traitement et ne sont pas stockes de maniere permanente.</li>
+      <li><strong>Enregistrements vocaux</strong> — utilises uniquement pour la transcription. Les fichiers audio sont supprimes immediatement apres traitement et ne sont pas stockes de maniere permanente sur nos serveurs ni chez nos prestataires.</li>
       <li><strong>Transcriptions textuelles</strong> — le texte transcrit de vos enregistrements, stocke dans votre compte.</li>
       <li><strong>Adresse email</strong> — utilisee pour l'authentification et la communication relative au service.</li>
+      <li><strong>Nom d'affichage</strong> — le prenom que vous fournissez lors de l'inscription, utilise pour personnaliser l'experience.</li>
       <li><strong>Donnees d'analyse</strong> — journal, insight, Mind Score et emotions generes par l'IA a partir de vos transcriptions.</li>
-      <li><strong>Preferences</strong> — parametres de l'application (heure de rappel, preferences d'onboarding).</li>
+      <li><strong>Preferences</strong> — parametres de l'application (heure de rappel, moment de la journee, preferences d'onboarding).</li>
+      <li><strong>Donnees d'abonnement</strong> — statut de votre abonnement (gratuit ou Pro), gere par Apple et RevenueCat.</li>
     </ul>
 
     <h2>2. Comment vos donnees sont traitees</h2>
-    <p>Vos enregistrements vocaux sont envoyes de maniere securisee a notre serveur pour traitement :</p>
+    <p>Vos enregistrements vocaux sont envoyes de maniere securisee (HTTPS/TLS) a notre serveur pour traitement :</p>
     <ul>
-      <li><strong>Transcription</strong> — realisee par ElevenLabs (Scribe v1). L'audio est transmis de maniere chiffree et n'est pas conserve par le prestataire apres traitement.</li>
-      <li><strong>Analyse IA</strong> — realisee par Google Gemini. Le texte transcrit est analyse pour generer votre journal, vos emotions et votre Mind Score. Aucune donnee personnelle identifiable n'est partagee au-dela du contenu de la transcription.</li>
+      <li><strong>Transcription</strong> — realisee par ElevenLabs (Scribe v1). L'audio est transmis de maniere chiffree, traite en temps reel, et n'est pas conserve par ElevenLabs apres traitement.</li>
+      <li><strong>Analyse IA</strong> — realisee par Google Gemini. Seul le texte transcrit est envoye (pas l'audio). Il est analyse pour generer votre journal, vos emotions et votre Mind Score. Google ne conserve pas les donnees transmises via l'API.</li>
     </ul>
+    <p>Aucune donnee n'est utilisee pour entrainer des modeles d'intelligence artificielle.</p>
 
     <h2>3. Stockage des donnees</h2>
-    <p>Vos donnees sont stockees de maniere securisee sur <strong>Supabase</strong>, une plateforme d'hebergement conforme aux standards de securite modernes. Les donnees sont chiffrees en transit (TLS) et au repos. L'acces a vos donnees est protege par des politiques de securite au niveau des lignes (Row Level Security) — seul vous pouvez acceder a vos propres donnees.</p>
+    <p>Vos donnees sont stockees de maniere securisee sur <strong>Supabase</strong>, une plateforme d'hebergement conforme aux standards de securite modernes. Les donnees sont chiffrees en transit (TLS) et au repos. L'acces a vos donnees est protege par des politiques de securite au niveau des lignes (Row Level Security) — seul vous pouvez acceder a vos propres donnees via votre session authentifiee.</p>
 
-    <h2>4. Services tiers</h2>
+    <h2>4. Transfert international de donnees</h2>
+    <p>Vos donnees peuvent etre traitees par des serveurs situes en dehors de l'Union europeenne, notamment aux Etats-Unis (ElevenLabs, Google AI, Supabase). Ces transferts sont effectues de maniere securisee et chiffree. En utilisant VoiceJournal, vous consentez a ce transfert de donnees.</p>
+
+    <h2>5. Services tiers</h2>
     <p>VoiceJournal utilise les services tiers suivants :</p>
     <ul>
-      <li><strong>Supabase</strong> — authentification et base de donnees</li>
-      <li><strong>ElevenLabs</strong> — transcription vocale</li>
-      <li><strong>Google AI (Gemini)</strong> — analyse et generation de contenu</li>
+      <li><strong>Supabase</strong> — authentification, base de donnees et stockage</li>
+      <li><strong>ElevenLabs</strong> — transcription vocale (Scribe v1)</li>
+      <li><strong>Google AI (Gemini)</strong> — analyse emotionnelle et generation de contenu</li>
       <li><strong>RevenueCat</strong> — gestion des abonnements in-app</li>
-      <li><strong>Apple App Store</strong> — distribution et paiements</li>
+      <li><strong>Apple App Store</strong> — distribution, paiements et authentification (Sign in with Apple)</li>
+      <li><strong>Expo / EAS</strong> — notifications push</li>
     </ul>
+    <p>Chaque prestataire dispose de sa propre politique de confidentialite. Nous vous encourageons a les consulter.</p>
 
-    <h2>5. Vos droits</h2>
-    <p>Vous disposez des droits suivants concernant vos donnees :</p>
+    <h2>6. Cookies et tracking</h2>
+    <p>VoiceJournal <strong>n'utilise aucun cookie</strong>, aucun traceur publicitaire, et aucun outil d'analytics tiers. Nous ne collectons aucun identifiant publicitaire (IDFA). Aucune donnee n'est partagee avec des regies publicitaires.</p>
+
+    <h2>7. Vos droits</h2>
+    <p>Conformement au Reglement General sur la Protection des Donnees (RGPD) et aux lois applicables, vous disposez des droits suivants :</p>
     <ul>
-      <li><strong>Acces</strong> — vous pouvez consulter toutes vos donnees directement dans l'application.</li>
-      <li><strong>Suppression</strong> — vous pouvez supprimer votre compte et toutes les donnees associees depuis les parametres de l'application.</li>
-      <li><strong>Portabilite</strong> — vous pouvez exporter vos donnees sur demande.</li>
+      <li><strong>Acces</strong> — vous pouvez consulter toutes vos donnees directement dans l'application (historique, journal, statistiques).</li>
+      <li><strong>Rectification</strong> — contactez-nous pour corriger des donnees inexactes.</li>
+      <li><strong>Suppression</strong> — vous pouvez supprimer votre compte et toutes les donnees associees directement depuis l'application (Reglages → Supprimer mon compte). La suppression est definitive et irreversible.</li>
+      <li><strong>Portabilite</strong> — vous pouvez demander l'export de vos donnees par email.</li>
+      <li><strong>Opposition</strong> — vous pouvez vous opposer au traitement de vos donnees en supprimant votre compte.</li>
     </ul>
 
-    <h2>6. Conservation des donnees</h2>
-    <p>Vos donnees sont conservees tant que votre compte est actif. En cas de suppression de votre compte, toutes vos donnees personnelles, transcriptions, journaux et analyses sont definitivement supprimees dans un delai de 30 jours.</p>
+    <h2>8. Conservation des donnees</h2>
+    <p>Vos donnees sont conservees tant que votre compte est actif. En cas de suppression de votre compte, toutes vos donnees personnelles (transcriptions, journaux, analyses, profil) sont definitivement supprimees dans un delai de 30 jours. Les sauvegardes automatiques sont purgees dans un delai de 90 jours.</p>
 
-    <h2>7. Vente de donnees</h2>
-    <p>VoiceJournal ne vend, ne loue et ne partage <strong>aucune</strong> donnee personnelle a des tiers a des fins commerciales ou publicitaires.</p>
+    <h2>9. Protection des mineurs</h2>
+    <p>VoiceJournal n'est pas destine aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de donnees personnelles de mineurs de moins de 13 ans. Si vous etes un parent ou tuteur et que vous pensez que votre enfant nous a fourni des donnees personnelles, contactez-nous pour que nous puissions les supprimer.</p>
 
-    <h2>8. Contact</h2>
-    <p>Pour toute question relative a la confidentialite de vos donnees, contactez-nous a : <a href="mailto:aymericelie.dijoux@gmail.com">aymericelie.dijoux@gmail.com</a></p>
+    <h2>10. Vente de donnees</h2>
+    <p>VoiceJournal ne vend, ne loue et ne partage <strong>aucune</strong> donnee personnelle a des tiers a des fins commerciales, publicitaires ou de profilage.</p>
+
+    <h2>11. Modifications de cette politique</h2>
+    <p>Nous nous reservons le droit de modifier cette politique de confidentialite a tout moment. En cas de modification significative, les utilisateurs seront informes par une notification dans l'application. La date de derniere mise a jour est indiquee en haut de cette page. L'utilisation continue du service apres modification vaut acceptation de la nouvelle politique.</p>
+
+    <h2>12. Contact</h2>
+    <p>Pour toute question relative a la confidentialite de vos donnees ou pour exercer vos droits, contactez-nous a : <a href="mailto:aymericelie.dijoux@gmail.com">aymericelie.dijoux@gmail.com</a></p>
+    <p>Responsable du traitement : SowDev</p>
   </main>
 
   <footer class="footer">
